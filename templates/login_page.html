@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Window</title>
+	<script src="https://kit.fontawesome.com/241e8d1073.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	
+
+		<div class="container2">
+			<form method="POST" action="{{ url_for('login_form') }}" enctype="multipart/form-data">
+			<div class="form-group1">
+	
+
+				<h1>Login</h1>
+			</div>
+			
+			<div>
+				<div class="form-group">
+					<!-- <label for="username"><b>Username</b></label> -->
+					<input type="text" placeholder="Enter Username" name="username" required>
+				</div>
+				<div class="form-group">
+					<!-- <label for="password"><b>Password</b></label> -->
+					<input type="password" placeholder="Enter Password" name="password" required>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="submit-btn">Log in</button>
+				</div>
+				<!-- <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				</label> -->
+	
+			</div>
+		</div>
+	</form>
+	
+</body>
+</html>
+
+	<style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #e949a3, #ff6542, #FCAF45, #FCAF45, #EF4444);
+            background: linear-gradient(to bottom, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+
+            /* This is the gradient for the Instagram logo */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            /* background-color: #fafafa; */
+        }
+		
+		.container2 {
+			display: flex;
+            justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+            width: 40%;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.4);
+            /* background-color: #fff; */
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		}
+		
+		h1 {
+			text-align: center;
+			color: #000000;
+		}
+		
+		input[type=text], input[type=password] {
+			width: 140%;
+			padding: 15px;
+			outline: none;  
+			margin: 14px 0;
+			background-color: rgba(255, 255, 255, 0.6);
+			
+			border: 2px solid #ccc;
+			border-radius: 30px;
+			
+			font-size: 16px;
+		}
+
+		.form-group1 i{
+			color: black;
+			text-decoration: none;
+			font-size: 70px;
+			transition: transform 0.1s ease;
+			}
+		
+		 button {
+            background-color: hsl(344, 93%, 61%);
+			color: #fff2f2;
+			padding: 10px 20px;
+	 
+			border: none;
+			border-radius: 30px;
+			cursor: pointer;
+			width: 100%;
+			font-size: 16px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            margin-top: 40px;
+			max-width: 200px;
+			transition: all 0.3s ease;
+		}
+		
+		button:hover {
+			background-color: #9aff9f;
+			transform: scale(1.05);
+		}
+
+        
+        .form-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+     
+        
+		
+		.cancelbtn {
+			background-color: #e76d64;
+			margin-right: 10px;
+		}
+		
+		.container2 label {
+			color: #565454;
+		}
+		
+		span.psw {
+			float: right;
+            position: absolute;
+            left: 50px;
+			padding-top: 20px;
+		}
+		
+		@media screen and (max-width: 600px) {
+				.container2 {
+					width: 90%;
+				}
+		}
+	</style>
+
+
+

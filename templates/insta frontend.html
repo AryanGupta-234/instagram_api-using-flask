@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload Media</title>
+	<link rel="stylesheet" href='/static/style.css/'>
+
+</head>
+<body>
+    <div class="username">
+        <!-- <h3>Logged In as</h3> -->
+        <h3>{{username}}</h3>
+    </div>
+	<div class="container">
+		<h1>Upload Your Media</h1>
+
+		<form method="POST" action="{{ url_for('process_form') }}" enctype="multipart/form-data">
+			<!-- <label for="media-type">Media Type:</label>
+			<select id="media-type" name="media-type"> -->
+				<!-- <option value="image">Image</option>
+				<option value="video">Video</option>
+				<option value="reel">Reel</option>
+			</select> -->
+
+			<label for="media-path" >Media Path:</label>
+            <input type="file" id="media-path" name="media-path">
+
+			<!-- <input type="text" id="media-path" name="media-path" required> -->
+
+			<label for="caption">Caption:</label>
+			<textarea id="caption" name="caption" rows="3" placeholder="Write a caption..."></textarea>
+
+			<label for="tags">Tags:</label>
+			<input type="text" id="tags" name="tags" placeholder="Add tags...">
+
+			<label for="schedule">Schedule Upload:</label>
+			<input type="datetime-local" id="schedule" name="schedule">
+            <input type="submit" value="Submit">
+ 
+		</form>
+
+        
+         
+        <!-- <script>
+            var fileInput = document.getElementById("myFileInput");
+            fileInput.addEventListener("change", function(event) {
+            var fullPath = event.target.value;
+            console.log(fullPath);
+            });
+
+        </script> -->
+
+        <!-- <script>
+            const fileInput = document.getElementById('media-path');
+            const filePathInput = document.getElementById('file-path');
+
+            fileInput.addEventListener('change', function() {
+            filePathInput.value = fileInput.value;
+            });
+
+        </script> -->
+        <!-- <script>
+            const form = document.querySelector('#myForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                fetch('/process_form', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    // Do something with the response data
+                })
+                .catch(error => console.error(error));
+            });
+        </script> -->
+        
+	</div>
+
+	
+</body>
+</html>
+
+
+ 
